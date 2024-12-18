@@ -2,10 +2,15 @@ package main
 
 import (
 	"fmt"
+	"github.com/spf13/cobra"
 	"os"
 
 	"github.com/ankitpokhrel/jira-cli/internal/cmd/root"
 )
+
+func RootCmd() *cobra.Command {
+	return root.NewCmdRoot()
+}
 
 func main() {
 	rootCmd := root.NewCmdRoot()
