@@ -1,8 +1,6 @@
 package api
 
 import (
-	"github.com/ankitpokhrel/jira-cli/internal/cmd/root"
-	"github.com/spf13/cobra"
 	"time"
 
 	"github.com/spf13/viper"
@@ -229,8 +227,4 @@ func ProxyWatchIssue(c *jira.Client, key string, user *jira.User) error {
 		return c.WatchIssueV2(key, assignee)
 	}
 	return c.WatchIssue(key, assignee)
-}
-
-func RootCmd() *cobra.Command {
-	return root.NewCmdRoot()
 }
